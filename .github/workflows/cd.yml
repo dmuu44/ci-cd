@@ -22,11 +22,11 @@ jobs:
           username: ubuntu
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            cd /home/ubuntu
+            cd /home/ec2-user
             rm -rf python-app
-            git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git python-app
+            git clone https://github.com/V-RAJESH-123/python-git.git python-app
             cd python-app
-            sudo apt update
-            sudo apt install python3-pip -y
+            sudo yum update
+            sudo yum install python3-pip -y
             pip3 install -r requirements.txt
             nohup python3 app.py > output.log 2>&1 &
