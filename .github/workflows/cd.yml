@@ -26,7 +26,6 @@ jobs:
             rm -rf python-app
             git clone https://github.com/dmuu44/ci-cd.git python-app
             cd python-app
-            sudo yum update
             sudo yum install python3-pip -y
             pip3 install -r requirements.txt
             nohup python3 app.py > output.log 2>&1 &
